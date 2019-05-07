@@ -1,0 +1,29 @@
+{
+  "name": "pruba_php",
+  "version": "1.0.0",
+  "description": "dec",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "repo"
+  },
+  "keywords": [
+    "dd"
+  ],
+  "author": "juan",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^3.1.6"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "materialize-css": "^1.0.0"
+  }
+}
