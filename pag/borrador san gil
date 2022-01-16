@@ -1,0 +1,92 @@
+<?php
+//*****************************************************inicia opciones***********
+ //editando la opcion 1
+ 
+  if ($_GET['accion']==1) {
+    require_once '../conexion/conexion.php';
+    //paquete  para ingreso de datos
+	$sql_di = "
+	select nombre, direccion, barrio, whatsapp, producto
+	from directorio
+	where filtro = 'papa';
+	"; 
+	$result_di=mysqli_query(db_conexion::db_conectar(),$sql_di);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="../css/css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- build:css css/css.css build/css-->
+     <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="../css/css.css">
+    
+    <!-- endbuild -->   
+        <!-- importamos el css-->
+	<title>Inicio</title>
+	<! titulo de la pagina->
+</head>
+<body>
+<nav>
+			<ul>
+				<li><a href="?" title="">Inicio</a></li>
+				<li>hola mundo</li>
+			<!--	<li><a href="pag/registro.php" title="">Registro</a></li> quitamos esta linea porque solo pueden registrar los coordinadores-->
+			</ul>
+		</nav>
+
+	<h3>bienvenido <?php echo $_SESSION['usuario_n']." ".$_SESSION['usuario_a']; ?></h3>
+    <! dice bienvenido y le muestra al usuario su nombre->
+    <br>
+    <h4>Para ingresar las notas seleccione la materia y curso</h4>    
+        <!-- inicia seccion de lista -->
+        <table class="striped responsive-table centered ">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Barrio</th>
+            <th>Whatsapp</th>
+            <th>Producto</th>    
+          </tr>
+        </thead>
+
+        <tbody>
+        <?php while ($datos_di = mysqli_fetch_array($result_di)) {
+            //ingresa codigo html automaticamente usando el while e imprimiendo el array de cada dato result o conexion con la base
+            echo "
+            <tr>
+<!-- esto es comentario asigna cada dato de la tabla-->
+                <td>{$datos_di['nombre']}</td>
+                <td>{$datos_di['direccion']}</td>
+                <td>{$datos_di['barrio']}</td>
+                <td>{$datos_di['whatsapp']}</td>
+                <td>{$datos_di['producto']}</td>
+            ";
+         
+            //coge los datos del usuario y se los reenvia a este mismo archivo con la variable accion = 2 para 
+            //que llenar los campos automaticamente de la tabla editar
+            //despues envia lo mismo pero para el caso de eliminar
+        //'../controladores/usuarios_c.php?accion=4&ide={$datos['id_usuario']}'
+        echo "
+        </tr>
+        ";
+        }
+        ?>
+
+        <!-- build:js main.js build/scripts -->
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>  
+        <script src="main.js"></script>
+        <!-- endbuild -->
+        </body>
+        </html>
+         
+        <?php
+        }
+        ?>
+

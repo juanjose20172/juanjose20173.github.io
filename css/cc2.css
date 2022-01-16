@@ -1,0 +1,254 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+nav{
+	position: fixed;
+	/* position fixed deja fija la barra en el mismo sitio
+	aunque den scroll*/
+	left: 0;
+	right: 0;
+	/* left o y rigth cero da el ancho a la barra en toda la pantalla*/
+	background-color: #DEDDF6;
+	height: 55px;
+	/* height da el grosor de cualquier elemento*/
+	z-index: 2;
+	/* z-index 2 permite dejar adelante siempre la barra*/
+}
+nav ul{
+	text-align: center;
+	list-style: none;
+	/*list-style es el estilo de lista en este caso le quitamos todos*/
+
+}
+nav ul li{
+	display: inline-block;
+	/*display configura los bloques
+	inline = en linea
+	block = en bloque
+	inline-block = mexcla los dos*/
+}
+nav ul li a{
+	display: block;
+	padding: 15px;
+	/*es el margen hacia adentro del elemento*/
+	color: blue;
+	text-decoration: none;
+	/* text-decoration da formato de texto, ej:subrayado, tachado etc,
+	en este caso none se los quita todos*/
+	font-size: 22px;
+	/*font-size tamaño de letra*/
+}
+nav ul li a:hover{
+	background-color: yellow;
+	/*background-color= color de fondo de la etiqueta*/
+}
+/* inicia configuracion para index*/
+.section_index{
+	position: absolute;
+	/* position absolute= posision absoluta nunca se mueve de ahí
+	puede quedar encima i debajo de algo*/
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* left rigt bottom 0 la centra en la pagona por tener posicion absoluta*/
+	top: 65px;
+	/* top distancia de arriba*/
+}
+.div_index{
+	border: solid 2px;
+	/* border solid le da color de borde*/
+	width: 350px;
+	/* width le da el ancho*/
+	height: 300px;
+	/* height de la el largo*/
+	position: relative;
+	/* posicion relative = posicion relativa no puede quedar 
+	encima o debajo de algo*/
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: 40px;
+	padding-left: 50px;
+	border-radius: 20px;
+	/* borde en forma de radio*/
+	border-color: #A4A1F7;
+	background-color: #CFCDF8; 
+}
+.div_index input {
+	/* el . (punto) se usa para "class"
+	el # se usa para "id"
+	aquí estamos configurando los input solo del div_index */
+	width: 300px;
+	height: 40px;
+	font-size: 25px;
+	position: relative;
+	margin-left: auto;
+	/* margin left margen de la izquierda (hacia afuera)*/
+	margin-right: auto;
+	/* margin right margen de la derecha (hacia afuera)*/
+	text-align: center;
+	margin-bottom: 5px;
+	/* margin left de abajo (hacia afuera)*/	
+	margin-top: 7px;
+	/* margin left margen de arriba (hacia afuera)*/
+}
+#s1_index{
+	width: 120px;
+	height: 45px;
+	margin-left: 30px;
+	margin-right: 10px;
+	position: absolute;
+	font-size: 25px;
+	border-radius: 25px;
+	background-color: white;
+
+}
+#s1_index:hover{
+	/* hover es cuando nos paramos sobre el elemento*/
+	background-color: #F6AE97;
+	font-size: 30px;
+}
+.a_index{
+	font-size: 30px;
+	position: absolute;
+	margin-left: 165px;
+	margin-top: 10px;
+	color: black;
+	/* color del elemento*/
+
+}
+.a_index:hover{
+	background-color: #F6AE97;
+	font-size: 35px;
+	margin-top: 7px;
+}
+#log_index{
+	font-size: 30px;
+}
+#mitabla tr {
+	height: 60px;
+}
+#h1_index{
+	font-size: 35px;
+	color: #7A5BDF;
+}
+.div_h1{
+	border:none;
+	/* border none sin borde*/
+	width: 650px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+}
+#mi_imput_index{
+}
+
+/* termina configuracion para index */
+/* utilizamos algunos section div ect de index para otras paginas */
+
+
+/* aqui empieza registro*/
+.div_registro{
+	border: solid 2px;
+	width: 300px;
+	height: 630px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: 40px;
+	padding-left: 50px;
+	border-radius: 20px;
+	border-color: #A4A1F7;
+	background-color: #CFCDF8; 
+}
+.div_registro input {
+	width: 250px;
+	height: 30px;
+	font-size: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	/* text align center entra el texto*/
+	margin-bottom: 5px;
+	margin-top: 7px;
+}
+.div_registro table tr{
+	height: 20px;
+}
+.echo_dpto_registro{
+	font-size: 20px;
+	border: solid;
+}
+.select_pto_registro{
+	width: 250px;
+	height: 35px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+.div1_registro{
+	font-size: 20px;
+}
+.cargar_ciu_nombre{
+	font-size: 18px;
+}
+.cargar_ciu_select{
+	width: 250px;
+	height: 35px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+.select_sala_registro{
+	width: 195px;
+	height: 35px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+.sala_texto_registro{
+	font-size: 20px;
+	width: 50px;
+	float: left;
+	margin-top: 10px;
+}
+#clave_registro td{
+	height: 50px;
+}
+/* cuando no coge las propiedades del elemento o de una tabla
+toca especificar ejemplo: .div_registro tabla tr {}*/
+
+.a_registro{
+	font-size: 20px;
+	/*border:solid 0.6px;*/
+	/*background-color: #EDE7FD;*/
+	color: black;
+}
+#section_registro{
+	bottom: 50px;
+	border:none;
+	height: 800px;
+}
+.form_registro{
+	margin-bottom: 50px;
+}
+.article_registro{
+	margin-left: 90px;
+	margin-top: 10px;
+	/*border:solid;*/
+	width: 80px;
+}
+.a_registro:hover{
+	font-size: 25px;
+	/*border:solid 0.6px;*/
+	/*background-color: #EDE7FD;*/
+	color: black;
+	background-color: yellow;
+}
+.article_registro:hover{
+	margin-left: 80px;
+}
+#div_h1_registro{
+	padding-left: 180px;
+}
+
+/* aqui termina registro*/

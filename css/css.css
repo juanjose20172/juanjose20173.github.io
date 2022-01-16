@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+    padding: 0;
+}
+#mitabla{
+    /*background-color: red;*/
+
+width: 400px;
+}
+#mitabla_registro{
+    /*background-color: red;*/
+width: 100px;
+}
+#btn_reg_registro{
+    font-size: 13px;
+    border-radius: 30%;
+    width: 90px;
+}
+
